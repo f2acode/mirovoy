@@ -2,8 +2,8 @@
 
 A WordPress theme constructed to a event company (Mirovoy)
 
-### Site uploaded
-* felipe.cf
+### Project working
+* http://www.felipe.cf
 
 #### Feature
 
