@@ -1,4 +1,4 @@
-## Static theme converted to WordPress theme
+## WordPress project
 
 A WordPress theme constructed to a event company (Mirovoy)
 
