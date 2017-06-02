@@ -17,3 +17,5 @@ A WordPress theme constructed to a event company (Mirovoy)
 
 
 #### Screenshot
+
+![alt tag](wp-content/themes/mirovoy/img/Screenshot.png)
