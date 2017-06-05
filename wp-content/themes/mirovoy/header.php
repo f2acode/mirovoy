@@ -62,118 +62,26 @@
   				<div class="col-md-10 col-sm-9 col-xs-6 premix-menu-section">
   					<div class="premix-menu">
   						<ul>
-  							<li><a href="index.html">HOME <!--<i class="fa fa-angle-down"></i>--></a>
+  							<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">HOME <!--<i class="fa fa-angle-down"></i>--></a>
   								<!--<ul>
   									<li><a href="index.html">Slider Version</a></li>
   									<li><a href="video-banner.html">Video Banner Version</a></li>
   								</ul>-->
   							</li>
-
-  							<li><a href="about.html">About</a></li>
-  							<li><a href="events.html">EVENTS <!--<i class="fa fa-angle-down"></i>--></a>
-  								<!-- <ul>
-  									<li><a href="events.html">Events Page</a></li>
-  									<li><a href="event-single.html">Event Single</a></li>
-  								</ul> -->
-  							</li>
-
-                <!--
-                <li><a href="#">ALBUMS <i class="fa fa-angle-down"></i></a>
-  								<ul>
-  									<li><a href="albums.html">Albums Page</a></li>
-  									<li><a href="album-single.html">Album Single</a></li>
-  								</ul>
-  							</li>
-
-
-                <li><a href="#">ARTISTS <i class="fa fa-angle-down"></i></a>
-  								<ul>
-  									<li><a href="artists.html">Artists Page</a></li>
-  									<li><a href="artist-single.html">Artist Single</a></li>
-  								</ul>
-  							</li>
-              -->
-  							<li><a href="gallery.html">GALLERY</a></li>
-  							<!--<li><a href="#">PAGE <i class="fa fa-angle-down"></i></a>
-  								<ul>
-  									<li><a href="pricing-table.html">Pricing Table</a></li>
-  									<li><a href="contact.html">Contact Us</a></li>
-  									<li><a href="404.html">404 Page</a></li>
-  								</ul>
-  							</li>
-  							<li><a href="#">SHOP <i class="fa fa-angle-down"></i></a>
-  								<ul>
-  									<li><a href="shop.html">Shop Page</a></li>
-  									<li><a href="shop-single.html">Shop Single</a></li>
-  									<li><a href="cart.html">Cart</a></li>
-  									<li><a href="cart-view.html">Cart View</a></li>
-  									<li><a href="empty-cart.html">Empty Cart</a></li>
-  									<li><a href="my-account.html">My Account</a></li>
-  								</ul>
-  							</li>
-  							<li><a href="#">BLOG <i class="fa fa-angle-down"></i></a>
-  								<ul>
-  									<li><a href="blog.html">Blog Page</a></li>
-  									<li><a href="blog-single.html">Blog Single</a></li>
-  								</ul>
-  							</li>-->
+                <li><?php wp_list_pages( '&title_li=' ); ?></li>
   						</ul>
 
   					</div> <!-- .premix-menu End -->
   					<div class="premix-menu premix-mobile-menu">
   						<ul class="slimmenu">
-  							<li><a href="index.html">HOME <i class="fa fa-angle-down"></i></a>
-  								<ul>
+  							<li><a href="index.html">HOME <!--<i class="fa fa-angle-down"></i>--></a>
+  								<!-- <ul>
   									<li><a href="index.html">Slider Version</a></li>
   									<li><a href="video-banner.html">Video Banner Version</a></li>
-  								</ul>
+  								</ul> -->
   							</li>
-  							<li><a href="about.html">About</a></li>
-  							<li><a href="#">EVENTS <!--<i class="fa fa-angle-down"></i>--></a>
-  								<ul>
-  									<li><a href="events.html">Events Page</a></li>
-  									<li><a href="event-single.html">Event Single</a></li>
-  								</ul>
-  							</li>
-  							<!--<li><a href="#">ALBUMS <i class="fa fa-angle-down"></i></a>
-  								<ul>
-  									<li><a href="albums.html">Albums Page</a></li>
-  									<li><a href="album-single.html">Album Single</a></li>
-  								</ul>
-  							</li>
-  							<li><a href="#">ARTISTS <i class="fa fa-angle-down"></i></a>
-  								<ul>
-  									<li><a href="artists.html">Artists Page</a></li>
-  									<li><a href="artist-single.html">Artist Single</a></li>
-  								</ul>
-  							</li>
-              -->
-  							<li><a href="gallery.html">GALLERY</a></li>
-  							<!--<li><a href="#">PAGE <i class="fa fa-angle-down"></i></a>
-  								<ul>
-  									<li><a href="pricing-table.html">Pricing Table</a></li>
-  									<li><a href="contact.html">Contact Us</a></li>
-  									<li><a href="404.html">404 Page</a></li>
-  								</ul>
-  							</li>
-  							<li><a href="#">SHOP <i class="fa fa-angle-down"></i></a>
-  								<ul>
-  									<li><a href="shop.html">Shop Page</a></li>
-  									<li><a href="shop-single.html">Shop Single</a></li>
-  									<li><a href="cart.html">Cart</a></li>
-  									<li><a href="cart-view.html">Cart View</a></li>
-  									<li><a href="empty-cart.html">Empty Cart</a></li>
-  									<li><a href="my-account.html">My Account</a></li>
-  								</ul>
-  							</li>
-  							<li><a href="#">BLOG <i class="fa fa-angle-down"></i></a>
-  								<ul>
-  									<li><a href="blog.html">Blog Page</a></li>
-  									<li><a href="blog-single.html">Blog Single</a></li>
-  								</ul>
-  							</li>
+  							<li><?php wp_list_pages( '&title_li=' ); ?></li>
   						</ul>
-            -->
   					</div> <!-- .premix-menu End -->
   				</div>
   			</div>

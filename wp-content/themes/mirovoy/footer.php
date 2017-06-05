@@ -4,11 +4,13 @@
 <section class="premix-footer-bottom-section">
   <div class="container">
     <div class="row">
-      <div class="col-md-4 col-sm-6">
+      <div class="col-md-6 col-sm-6">
         <div class="premix-single-footer-bottom">
-          <h4>About Us</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
-          <div class="premix-border"></div> <!-- .premix-border END -->
+          <h4>Follow us!</h4>
+          <!-- <p>
+            <?php the_field('about_history'); ?>
+          </p>
+          <div class="premix-border"></div> -->
           <div class="premix-social-list">
             <ul>
               <li><a href="<?php echo get_option('facebook'); ?>"><i class="fa fa-facebook"></i></a></li>
@@ -19,26 +21,8 @@
           </div> <!-- .premix-social-list END -->
         </div> <!-- .premix-single-footer-bottom END -->
       </div>
-      <div class="col-md-4 col-sm-6">
-        <div class="premix-single-footer-bottom premix-single-news">
-          <h4>Recent News</h4>
-          <a href="" class="premix-single-recent-news">
-            <h5>Holy fastival 2017, London</h5>
-            <p>20 April, 2017</p>
-          </a> <!-- .premix-single-recent-news END -->
-          <div class="premix-border"></div> <!-- .premix-border END -->
-          <a href="" class="premix-single-recent-news">
-            <h5>Holy fastival 2017, London</h5>
-            <p>20 April, 2017</p>
-          </a> <!-- .premix-single-recent-news END -->
-          <div class="premix-border"></div> <!-- .premix-border END -->
-          <a href="" class="premix-single-recent-news">
-            <h5>Holy fastival 2017, London</h5>
-            <p>20 April, 2017</p>
-          </a> <!-- .premix-single-recent-news END -->
-        </div> <!-- .premix-single-footer-bottom END -->
-      </div>
-      <div class="col-md-4 col-sm-12">
+
+      <div class="col-md-6 col-sm-12">
         <div class="premix-single-footer-bottom">
           <h4>Photo Gallery</h4>
           <div class="premix-image-gallery">

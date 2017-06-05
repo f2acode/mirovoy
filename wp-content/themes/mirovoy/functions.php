@@ -23,13 +23,20 @@ add_action('wp_print_styles', 'startwordpress_google_fonts');
 
 add_theme_support( 'title-tag' );
 
-// Custom Post Type
-function create_my_custom_post() {
-	register_post_type( 'my-custom-post',
+// Custom Event Post Type
+function create_my_event_post() {
+	register_post_type( 'event-post',
 			array(
 			'labels' => array(
-					'name' => __( 'My Custom Post' ),
-					'singular_name' => __( 'My Custom Post' ),
+					'name' => __( 'Events' ),
+					'singular_name' => __( 'Event' ),
+        	'add_new_item'        => __( 'Add New Event', 'twentythirteen'),
+        	'add_new'             => __( 'Add New', 'twentythirteen'),
+        	'edit_item'           => __( 'Edit Event', 'twentythirteen'),
+        	'update_item'         => __( 'Update Event', 'twentythirteen'),
+        	'search_items'        => __( 'Search Event', 'twentythirteen'),
+        	'not_found'           => __( 'Not Found', 'twentythirteen' ),
+        	'not_found_in_trash'  => __( 'Not found in Trash', 'twentythirteen' ),
 			),
 			'public' => true,
 			'has_archive' => true,
@@ -41,7 +48,7 @@ function create_my_custom_post() {
 			)
 	));
 }
-add_action( 'init', 'create_my_custom_post' );
+add_action( 'init', 'create_my_event_post' );
 
 // Custom settings
 function social_settings_add_menu() {
@@ -50,35 +57,35 @@ function social_settings_add_menu() {
 add_action( 'admin_menu', 'social_settings_add_menu' );
 
 
-// ====== Changing the menu "posts" to "events"
-function revcon_change_post_label() {
-    global $menu;
-    global $submenu;
-    $menu[5][0] = 'Events';
-    $submenu['edit.php'][5][0] = 'Events';
-    $submenu['edit.php'][10][0] = 'Add Events';
-    $submenu['edit.php'][16][0] = 'Events Tags';
-}
-function revcon_change_post_object() {
-    global $wp_post_types;
-    $labels = &$wp_post_types['post']->labels;
-    $labels->name = 'Events';
-    $labels->singular_name = 'Events';
-    $labels->add_new = 'Add Events';
-    $labels->add_new_item = 'Add Events';
-    $labels->edit_item = 'Edit Events';
-    $labels->new_item = 'Events';
-    $labels->view_item = 'View Events';
-    $labels->search_items = 'Search Events';
-    $labels->not_found = 'No Events found';
-    $labels->not_found_in_trash = 'No Events found in Trash';
-    $labels->all_items = 'All Events';
-    $labels->menu_name = 'Events';
-    $labels->name_admin_bar = 'Events';
-}
-
-add_action( 'admin_menu', 'revcon_change_post_label' );
-add_action( 'init', 'revcon_change_post_object' );
+// // ====== Changing the menu "posts" to "events"
+// function revcon_change_post_label() {
+//     global $menu;
+//     global $submenu;
+//     $menu[5][0] = 'Events';
+//     $submenu['edit.php'][5][0] = 'Events';
+//     $submenu['edit.php'][10][0] = 'Add Events';
+//     $submenu['edit.php'][16][0] = 'Events Tags';
+// }
+// function revcon_change_post_object() {
+//     global $wp_post_types;
+//     $labels = &$wp_post_types['post']->labels;
+//     $labels->name = 'Events';
+//     $labels->singular_name = 'Events';
+//     $labels->add_new = 'Add Events';
+//     $labels->add_new_item = 'Add Events';
+//     $labels->edit_item = 'Edit Events';
+//     $labels->new_item = 'Events';
+//     $labels->view_item = 'View Events';
+//     $labels->search_items = 'Search Events';
+//     $labels->not_found = 'No Events found';
+//     $labels->not_found_in_trash = 'No Events found in Trash';
+//     $labels->all_items = 'All Events';
+//     $labels->menu_name = 'Events';
+//     $labels->name_admin_bar = 'Events';
+// }
+//
+// add_action( 'admin_menu', 'revcon_change_post_label' );
+// add_action( 'init', 'revcon_change_post_object' );
 
 
 // Create Custom Global Settings

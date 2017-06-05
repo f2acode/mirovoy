@@ -39,7 +39,7 @@ PREMIX - Contact Form
       viewport.bottom = viewport.top + $(window).height();
       bounds.right = bounds.left + this.outerWidth();
       bounds.bottom = bounds.top + this.outerHeight();
-      return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom)); 
+      return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
   };
 $(window).on('load', function() {
 
@@ -55,38 +55,38 @@ $(window).on('load', function() {
   /* --------------------------------------------------------------------- */
   var getMax = function(){
       return $(document).height() - $(window).height();
-  }   
+  }
   var getValue = function(){
       return $(window).scrollTop();
-  }    
+  }
   if('max' in document.createElement('progress')){
       // Browser supports progress element
-      var progressBar = $('progress');      
+      var progressBar = $('progress');
       // Set the Max attr for the first time
       progressBar.attr({ max: getMax() });
       $(document).on('scroll', function(){
           // On scroll only Value attr needs to be calculated
           progressBar.attr({ value: getValue() });
-      });    
+      });
       $(window).on('resize',function(){
           // On resize, both Max/Value attr needs to be calculated
           progressBar.attr({ max: getMax(), value: getValue() });
-      });   
+      });
   }
   else {
-      var progressBar = $('.progress-bar'), 
-          max = getMax(), 
-          value, width;      
+      var progressBar = $('.progress-bar'),
+          max = getMax(),
+          value, width;
       var getWidth = function(){
           // Calculate width in percentage
-          value = getValue();            
+          value = getValue();
           width = (value/max) * 100;
           width = width + '%';
           return width;
-      }     
+      }
       var setWidth = function(){
           progressBar.css({ width: getWidth() });
-      }      
+      }
       $(document).on('scroll', setWidth);
       $(window).on('resize', function(){
           // Need to reset the Max attr
@@ -101,7 +101,7 @@ $(window).on('load', function() {
   if($('#premix-gallery').is_exists()) {
     var $container = $('#premix-gallery'),
         colWidth = function () {
-          var w = $container.width(), 
+          var w = $container.width(),
             columnNum = 1,
             columnWidth = 0;
           if (w > 1200) {
@@ -163,7 +163,7 @@ $(window).on('load', function() {
           $container.isotope( options );
         }
         return false;
-      }); 
+      });
   } // End is_exists
 }); // end on.load event
 $(document).ready(function() {
@@ -202,14 +202,14 @@ $(document).ready(function() {
   /* --------------------------------------------------------------------- */
   if($('#main-example').is_exists()) {
     $('#main-example').countdown('2018/03/10').on('update.countdown', function(event) {
-      var $this = $(this).html(event.strftime(' ' 
-        + '<span class="timer-count">%-D <span class="timer-text">Days</span></span>  ' 
-        + '<span class="timer-count">%H <span class="timer-text">Hours</span></span> ' 
-        + '<span class="timer-count">%M <span class="timer-text">Minutes</span></span> ' 
+      var $this = $(this).html(event.strftime(' '
+        + '<span class="timer-count">%-D <span class="timer-text">Days</span></span>  '
+        + '<span class="timer-count">%H <span class="timer-text">Hours</span></span> '
+        + '<span class="timer-count">%M <span class="timer-text">Minutes</span></span> '
         + '<span class="timer-count">%S <span class="timer-text">Secods</span></span>'));
     });
   } // End is_exists
- 
+
   /* --------------------------------------------------------------------- */
   /*  PREMIX - Gallery Grid Item
   /* --------------------------------------------------------------------- */
@@ -265,27 +265,27 @@ $(document).ready(function() {
             {
                 title: 'Another Day In Paradise!',
                 author: 'Phil Collins',
-                url: 'media/01AnotherDayInParadise.mp3',
+                url: 'media/EH!DE - Captain Jack Sparrow [DUBSTEP] 128 kbps .mp3',
             },
             {
                 title: 'A Thousand Years',
                 author: 'Christina Perri',
-                url: 'media/christinaperriathousandyears.mp3',
+                url: 'media/EH!DE - Captain Jack Sparrow [DUBSTEP] 128 kbps .mp3',
             },
             {
                 title: 'Uptown Funk',
                 author: 'Bruno Mars',
-                url: 'media/BrunoMars-UptownFunk.mp3',
+                url: 'media/EH!DE - Captain Jack Sparrow [DUBSTEP] 128 kbps .mp3',
             },
             {
                 title: 'Sacrifice',
                 author: 'Elton John',
-                url: 'media/EltonJohn-Sacrifice.mp3',
+                url: 'media/EH!DE - Captain Jack Sparrow [DUBSTEP] 128 kbps .mp3',
             },
             {
                 title: 'Sugar',
                 author: 'Maroon 5',
-                url: 'media/Maroon5-Sugar.mp3',
+                url: 'media/EH!DE - Captain Jack Sparrow [DUBSTEP] 128 kbps .mp3',
             }
         ]
     });
@@ -304,27 +304,27 @@ $(document).ready(function() {
               {
                   title: 'Another Day In Paradise!',
                   author: 'Phil Collins',
-                  url: 'media/01AnotherDayInParadise.mp3',
+                  url: 'media/EH!DE - Captain Jack Sparrow [DUBSTEP] 128 kbps .mp3',
               },
               {
                   title: 'A Thousand Years',
                   author: 'Christina Perri',
-                  url: 'media/christinaperriathousandyears.mp3',
+                  url: 'media/EH!DE - Captain Jack Sparrow [DUBSTEP] 128 kbps .mp3',
               },
               {
                   title: 'Uptown Funk',
                   author: 'Bruno Mars',
-                  url: 'media/BrunoMars-UptownFunk.mp3',
+                  url: 'media/EH!DE - Captain Jack Sparrow [DUBSTEP] 128 kbps .mp3',
               },
               {
                   title: 'Sacrifice',
                   author: 'Elton John',
-                  url: 'media/EltonJohn-Sacrifice.mp3',
+                  url: 'media/EH!DE - Captain Jack Sparrow [DUBSTEP] 128 kbps .mp3',
               },
               {
                   title: 'Sugar',
                   author: 'Maroon 5',
-                  url: 'media/Maroon5-Sugar.mp3',
+                  url: 'media/EH!DE - Captain Jack Sparrow [DUBSTEP] 128 kbps .mp3',
               }
           ]
 
@@ -421,8 +421,8 @@ $(document).ready(function() {
         $.ajax({
           method: "POST",
           url: "php/form-send.php",
-          data: { 
-            name: $('#form-name-px').val(), 
+          data: {
+            name: $('#form-name-px').val(),
             email: $('#form-email-px').val(),
             subject: $('#form-subject-px').val(),
             message: $('#form-massage-px').val()
@@ -436,10 +436,10 @@ $(document).ready(function() {
               $('<div class="message-update alert alert-danger">'+ res.email_error +'</div>').prependTo('.submit-button-sec');
             }
 
-            $('#form-name-px').val(''); 
+            $('#form-name-px').val('');
             $('#form-email-px').val('');
             $('#form-subject-px').val('');
-            $('#form-massage-px').val('');            
+            $('#form-massage-px').val('');
           }
         });
       }
@@ -468,9 +468,9 @@ $(window).on('scroll', function(){
   if($('#main_menu_fixed').is_exists()) {
     var stickyfoulx = $('#main_menu_fixed').offset().top;
     if ($(window).scrollTop() > stickyfoulx){
-      $(".premix-main-menu-area").addClass("fixedMenu"); 
+      $(".premix-main-menu-area").addClass("fixedMenu");
     } else {
-      $(".premix-main-menu-area").removeClass("fixedMenu"); 
+      $(".premix-main-menu-area").removeClass("fixedMenu");
     }
   }
 }); // END Window Scroll
