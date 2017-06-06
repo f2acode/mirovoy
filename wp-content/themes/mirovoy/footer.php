@@ -1,7 +1,7 @@
 </div><!-- /.container -->
 
 <!-- Premix Footer Bottom Section Start -->
-<section class="premix-footer-bottom-section">
+<section class="premix-footer-bottom-section premix-footer-bottom-bg">
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-sm-6">
@@ -27,15 +27,16 @@
           <h4>Photo Gallery</h4>
           <div class="premix-image-gallery">
             <ul>
-              <li><a href="#"><img src="<?php echo get_bloginfo('template_url')?>/img/gallery-img-1.png" alt=""></a></li>
-              <li><a href="#"><img src="<?php echo get_bloginfo('template_url')?>/img/gallery-img-2.png" alt=""></a></li>
-              <li><a href="#"><img src="<?php echo get_bloginfo('template_url')?>/img/gallery-img-3.png" alt=""></a></li>
-              <li><a href="#"><img src="<?php echo get_bloginfo('template_url')?>/img/gallery-img-4.png" alt=""></a></li>
-              <li><a href="#"><img src="<?php echo get_bloginfo('template_url')?>/img/gallery-img-5.png" alt=""></a></li>
-              <li><a href="#"><img src="<?php echo get_bloginfo('template_url')?>/img/gallery-img-6.png" alt=""></a></li>
-              <li><a href="#"><img src="<?php echo get_bloginfo('template_url')?>/img/gallery-img-7.png" alt=""></a></li>
-              <li><a href="#"><img src="<?php echo get_bloginfo('template_url')?>/img/gallery-img-8.png" alt=""></a></li>
-              <li><a href="#"><img src="<?php echo get_bloginfo('template_url')?>/img/gallery-img-9.png" alt=""></a></li>
+              <?php
+                $args =  array(
+                  'post_type' => 'gallery',
+                  'orderby' => 'menu_order',
+                  'order' => 'ASC'
+                );
+                 $custom_query = new WP_Query( $args );
+                    while ($custom_query->have_posts()) : $custom_query->the_post();?>
+                    <li><a href="#"><img src="<?php the_field('image_gallery')?>" alt=""></a></li>
+                  <?php endwhile;?>
             </ul>
           </div>
         </div> <!-- .premix-single-footer-bottom END -->

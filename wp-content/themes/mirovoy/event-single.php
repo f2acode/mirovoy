@@ -5,7 +5,7 @@
 */
  get_header();  ?>
 
-<section class="premix-welcome-section premix-innner-page" style="background-image: url(img/single-page-bg.png);">
+<section class="premix-welcome-section premix-innner-page" style="background-image: url(<?php the_field('background')?>);">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -23,7 +23,7 @@
 </section>
 <!-- Premix Countdown Timer -->
 <div class="premix-countdown-timer">
-	<div class="countdown-container" id="main-example"></div>
+	<div class="countdown-container" id="main-example" value="<?php the_field('event_date')?>"></div>
 </div> <!-- .premix-countdown-timer END -->
 <!-- Premix Single Event Post Start -->
 <section class="premix-single-event-post section-padding">
@@ -39,11 +39,15 @@
 						<div class="premix-social-list">
 							<h5>Share this</h5>
 							<ul>
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-instagram "></i></a></li>
-								<li><a href="#"><i class="fa fa-whatsapp "></i></a></li>
-								<li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+								<li>
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+								<li>
+                  <a href="https://twitter.com/home?status=<?php the_permalink();?>"><i class="fa fa-twitter"></i></a>
+                </li>
+								
 							</ul>
 						</div> <!-- .premix-social-list END -->
 					</div>

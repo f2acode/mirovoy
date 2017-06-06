@@ -3,7 +3,7 @@
 <?php get_header(); ?>
 
 <!-- Premix Welcome Section Start -->
-<section class="premix-welcome-section premix-innner-page" style="background-image: url(img/single-page-bg.png);">
+<section class="premix-welcome-section premix-innner-page" style="background-image: url(<?php the_field('background_image')?>);">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -25,30 +25,17 @@
     <h2 data-titles="GALLERY">GALLERY</h2>
   </div> <!-- .premix-section-heading End -->
   <div class="premix-gallery-wraper content-margin-top" id="premix-gallery">
-    <a href="img/big-gallery-img-popup-1.png" class="premix-gallery-grid-item">
-      <img src="img/big-gallery-img-1.png" alt="">
-    </a> <!-- .premix-gallery-grid-item END -->
-    <a href="img/big-gallery-img-popup-2.png" class="premix-gallery-grid-item">
-      <img src="img/big-gallery-img-2.png" alt="">
-    </a> <!-- .premix-gallery-grid-item END -->
-    <a href="img/big-gallery-img-popup-3.png" class="premix-gallery-grid-item">
-      <img src="img/big-gallery-img-3.png" alt="">
-    </a> <!-- .premix-gallery-grid-item END -->
-    <a href="img/big-gallery-img-popup-4.png" class="premix-gallery-grid-item">
-      <img src="img/big-gallery-img-4.png" alt="">
-    </a> <!-- .premix-gallery-grid-item END -->
-    <a href="img/big-gallery-img-popup-5.png" class="premix-gallery-grid-item">
-      <img src="img/big-gallery-img-5.png" alt="">
-    </a> <!-- .premix-gallery-grid-item END -->
-    <a href="img/big-gallery-img-popup-6.png" class="premix-gallery-grid-item">
-      <img src="img/big-gallery-img-6.png" alt="">
-    </a> <!-- .premix-gallery-grid-item END -->
-    <a href="img/big-gallery-img-popup-7.png" class="premix-gallery-grid-item">
-      <img src="img/big-gallery-img-7.png" alt="">
-    </a> <!-- .premix-gallery-grid-item END -->
-    <a href="img/big-gallery-img-popup-4.png" class="premix-gallery-grid-item">
-      <img src="img/big-gallery-img-8.png" alt="">
-    </a> <!-- .premix-gallery-grid-item END -->
+    <?php
+      $args =  array(
+        'post_type' => 'gallery',
+        'orderby' => 'menu_order',
+        'order' => 'ASC'
+      );
+       $custom_query = new WP_Query( $args );
+          while ($custom_query->have_posts()) : $custom_query->the_post();
+          get_template_part( 'gallery-single', get_post_format() );
+        endwhile;?>
+
   </div> <!-- .premix-gallery-wraper END -->
 </section>
 

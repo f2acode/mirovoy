@@ -201,7 +201,9 @@ $(document).ready(function() {
   /*  PREMIX - CountDown
   /* --------------------------------------------------------------------- */
   if($('#main-example').is_exists()) {
-    $('#main-example').countdown('2018/03/10').on('update.countdown', function(event) {
+    var parts = document.getElementById("main-example").getAttribute('value');
+
+    $('#main-example').countdown(parts.substr(0,4)+'/'+parts.substr(4,2)+'/'+parts.substr(6,2)).on('update.countdown', function(event) {
       var $this = $(this).html(event.strftime(' '
         + '<span class="timer-count">%-D <span class="timer-text">Days</span></span>  '
         + '<span class="timer-count">%H <span class="timer-text">Hours</span></span> '
@@ -265,27 +267,7 @@ $(document).ready(function() {
             {
                 title: 'Another Day In Paradise!',
                 author: 'Phil Collins',
-                url: 'media/EH!DE - Captain Jack Sparrow [DUBSTEP] 128 kbps .mp3',
-            },
-            {
-                title: 'A Thousand Years',
-                author: 'Christina Perri',
-                url: 'media/EH!DE - Captain Jack Sparrow [DUBSTEP] 128 kbps .mp3',
-            },
-            {
-                title: 'Uptown Funk',
-                author: 'Bruno Mars',
-                url: 'media/EH!DE - Captain Jack Sparrow [DUBSTEP] 128 kbps .mp3',
-            },
-            {
-                title: 'Sacrifice',
-                author: 'Elton John',
-                url: 'media/EH!DE - Captain Jack Sparrow [DUBSTEP] 128 kbps .mp3',
-            },
-            {
-                title: 'Sugar',
-                author: 'Maroon 5',
-                url: 'media/EH!DE - Captain Jack Sparrow [DUBSTEP] 128 kbps .mp3',
+                url: SiteParameters.theme_directory + '/media/CaptainJackSparrow.mp3',
             }
         ]
     });
@@ -304,27 +286,7 @@ $(document).ready(function() {
               {
                   title: 'Another Day In Paradise!',
                   author: 'Phil Collins',
-                  url: 'media/EH!DE - Captain Jack Sparrow [DUBSTEP] 128 kbps .mp3',
-              },
-              {
-                  title: 'A Thousand Years',
-                  author: 'Christina Perri',
-                  url: 'media/EH!DE - Captain Jack Sparrow [DUBSTEP] 128 kbps .mp3',
-              },
-              {
-                  title: 'Uptown Funk',
-                  author: 'Bruno Mars',
-                  url: 'media/EH!DE - Captain Jack Sparrow [DUBSTEP] 128 kbps .mp3',
-              },
-              {
-                  title: 'Sacrifice',
-                  author: 'Elton John',
-                  url: 'media/EH!DE - Captain Jack Sparrow [DUBSTEP] 128 kbps .mp3',
-              },
-              {
-                  title: 'Sugar',
-                  author: 'Maroon 5',
-                  url: 'media/EH!DE - Captain Jack Sparrow [DUBSTEP] 128 kbps .mp3',
+                  url: SiteParameters.theme_directory + '/media/CaptainJackSparrow.mp3',
               }
           ]
 

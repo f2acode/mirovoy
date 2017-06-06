@@ -1,11 +1,13 @@
 
-<?php get_header(); ?>
+<?php
+/*Template Name: Home page*/
+get_header(); ?>
 
 <div id="element">
-  <img src="<?php echo get_bloginfo('template_url')?>/img/main-slider-1.jpg" alt="">
-  <img src="<?php echo get_bloginfo('template_url')?>/img/main-slider-2.jpg" alt="">
-  <img src="<?php echo get_bloginfo('template_url')?>/img/main-slider-3.jpg" alt="">
-  <img src="<?php echo get_bloginfo('template_url')?>/img/main-slider-4.jpg" alt="">
+  <img src="<?php the_field('slider_image_1')?>" alt="">
+  <img src="<?php the_field('slider_image_2')?>" alt="">
+  <img src="<?php the_field('slider_image_3')?>" alt="">
+  <img src="<?php the_field('slider_image_4')?>" alt="">
 </div>
 <section class="premix-welcome-section">
   <div class="container">

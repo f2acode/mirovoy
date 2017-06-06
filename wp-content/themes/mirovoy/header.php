@@ -62,24 +62,12 @@
   				<div class="col-md-10 col-sm-9 col-xs-6 premix-menu-section">
   					<div class="premix-menu">
   						<ul>
-  							<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">HOME <!--<i class="fa fa-angle-down"></i>--></a>
-  								<!--<ul>
-  									<li><a href="index.html">Slider Version</a></li>
-  									<li><a href="video-banner.html">Video Banner Version</a></li>
-  								</ul>-->
-  							</li>
                 <li><?php wp_list_pages( '&title_li=' ); ?></li>
   						</ul>
 
   					</div> <!-- .premix-menu End -->
   					<div class="premix-menu premix-mobile-menu">
   						<ul class="slimmenu">
-  							<li><a href="index.html">HOME <!--<i class="fa fa-angle-down"></i>--></a>
-  								<!-- <ul>
-  									<li><a href="index.html">Slider Version</a></li>
-  									<li><a href="video-banner.html">Video Banner Version</a></li>
-  								</ul> -->
-  							</li>
   							<li><?php wp_list_pages( '&title_li=' ); ?></li>
   						</ul>
   					</div> <!-- .premix-menu End -->

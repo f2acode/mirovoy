@@ -9,6 +9,15 @@ function startwordpress_scripts() {
 	wp_enqueue_script( 'jquery-3', get_template_directory_uri() . '/js/jquery-3.2.0.min.js', array( 'jquery' ), '3.3.6', true );
 	wp_enqueue_script( 'plugins', get_template_directory_uri() . '/js/plugins.js', array( 'jquery' ), '3.3.6', true );
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '3.3.6', true );
+
+	/* Make site url available to JS scripts */
+
+	$site_parameters = array(
+	    'site_url' => get_site_url(),
+	    'theme_directory' => get_template_directory_uri()
+	    );
+	wp_localize_script( 'main', 'SiteParameters', $site_parameters );
+	
 }
 
 add_action( 'wp_enqueue_scripts', 'startwordpress_scripts' );
@@ -50,6 +59,33 @@ function create_my_event_post() {
 }
 add_action( 'init', 'create_my_event_post' );
 
+// Custom Gallery Post Type
+function create_my_gallery_post() {
+	register_post_type( 'gallery',
+			array(
+			'labels' => array(
+					'name' => __( 'Gallery' ),
+					'singular_name' => __( 'Gallery' ),
+        	'add_new_item'        => __( 'Add New Gallery', 'twentythirteen'),
+        	'add_new'             => __( 'Add New', 'twentythirteen'),
+        	'edit_item'           => __( 'Edit Gallery', 'twentythirteen'),
+        	'update_item'         => __( 'Update Gallery', 'twentythirteen'),
+        	'search_items'        => __( 'Search Gallery', 'twentythirteen'),
+        	'not_found'           => __( 'Not Found', 'twentythirteen' ),
+        	'not_found_in_trash'  => __( 'Not found in Trash', 'twentythirteen' ),
+			),
+			'public' => true,
+			'has_archive' => true,
+			'supports' => array(
+					'title',
+					'editor',
+					'thumbnail',
+				  'custom-fields'
+			)
+	));
+}
+add_action( 'init', 'create_my_gallery_post' );
+
 // Custom settings
 function social_settings_add_menu() {
   add_menu_page( 'Social Settings', 'Social Settings', 'manage_options', 'social-settings', 'custom_settings_page', null, 99 );
@@ -86,7 +122,6 @@ add_action( 'admin_menu', 'social_settings_add_menu' );
 //
 // add_action( 'admin_menu', 'revcon_change_post_label' );
 // add_action( 'init', 'revcon_change_post_object' );
-
 
 // Create Custom Global Settings
 function custom_settings_page() { ?>
