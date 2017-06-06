@@ -25,7 +25,44 @@ get_header(); ?>
               <div id="homepage-player-container">
                 <button class="premix_player_prev"><img src="<?php echo get_bloginfo('template_url')?>/img/premix-music-planer-prev-btn.png" alt="" /></button>
                 <button class="premix_player_next"><img src="<?php echo get_bloginfo('template_url')?>/img/premix-music-planer-next-btn.png" alt="" /></button>
-                <div id="premix-player-index" class="aplayer"></div>
+                <div id="premix-player-index" class="aplayer"
+                file1 ="<?php
+                $file1 = get_field('music_1');
+                echo $file1['url'];
+                ?>"
+                title1="<?php
+                $file1 = get_field('music_1');
+                echo $file1['title'];
+                ?>"
+                artist1="<?php
+                $file1 = get_field('music_1');
+                echo $file1['caption'];
+                ?>"
+                file2 ="<?php
+                $file2 = get_field('music_2');
+                echo $file2['url'];
+                ?>"
+                title2="<?php
+                $file2 = get_field('music_2');
+                echo $file2['title'];
+                ?>"
+                artist2="<?php
+                $file2 = get_field('music_2');
+                echo $file2['caption'];
+                ?>"
+                file3 ="<?php
+                $file3 = get_field('music_3');
+                echo $file3['url'];
+                ?>"
+                title3="<?php
+                $file3 = get_field('music_3');
+                echo $file3['title'];
+                ?>"
+                artist3="<?php
+                $file3 = get_field('music_3');
+                echo $file3['caption'];
+                ?>">
+              </div>
               </div>
             </div>
           </div>

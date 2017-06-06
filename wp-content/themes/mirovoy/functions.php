@@ -1,4 +1,6 @@
 <?php
+
+@ini_set( 'upload_max_size' , '64M' );
 // Add scripts and stylesheets
 function startwordpress_scripts() {
 	wp_enqueue_style( 'custom', get_template_directory_uri() . '/css/custom.css' );
@@ -17,7 +19,7 @@ function startwordpress_scripts() {
 	    'theme_directory' => get_template_directory_uri()
 	    );
 	wp_localize_script( 'main', 'SiteParameters', $site_parameters );
-	
+
 }
 
 add_action( 'wp_enqueue_scripts', 'startwordpress_scripts' );

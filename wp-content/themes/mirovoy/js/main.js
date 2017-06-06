@@ -265,8 +265,8 @@ $(document).ready(function() {
         mode: 'random',
         music: [
             {
-                title: 'Another Day In Paradise!',
-                author: 'Phil Collins',
+                title: 'Another Day In Paradise! - Phil Collins',
+                author: '',
                 url: SiteParameters.theme_directory + '/media/CaptainJackSparrow.mp3',
             }
         ]
@@ -274,6 +274,10 @@ $(document).ready(function() {
   } // End is_exists
 
   if($('#premix-player-index').is_exists()) {
+    console.log(document.getElementById('premix-player-index').getAttribute('artist1'));
+    console.log(document.getElementById('premix-player-index').getAttribute('artist2'));
+    console.log(document.getElementById('premix-player-index').getAttribute('artist3'));
+
       var ap1 = new APlayer({
         element: document.getElementById('premix-player-index'),
         narrow: false,
@@ -284,9 +288,19 @@ $(document).ready(function() {
         mode: 'random',
         music: [
               {
-                  title: 'Another Day In Paradise!',
-                  author: 'Phil Collins',
-                  url: SiteParameters.theme_directory + '/media/CaptainJackSparrow.mp3',
+                  title: document.getElementById('premix-player-index').getAttribute('title1'),
+                  author: document.getElementById('premix-player-index').getAttribute('artist1'),
+                  url: document.getElementById('premix-player-index').getAttribute('file1'),
+              },
+              {
+                  title: document.getElementById('premix-player-index').getAttribute('title2'),
+                  author: document.getElementById('premix-player-index').getAttribute('artist2'),
+                  url: document.getElementById('premix-player-index').getAttribute('file2'),
+              },
+              {
+                  title: document.getElementById('premix-player-index').getAttribute('title3'),
+                  author: document.getElementById('premix-player-index').getAttribute('artist3'),
+                  url: document.getElementById('premix-player-index').getAttribute('file3'),
               }
           ]
 
