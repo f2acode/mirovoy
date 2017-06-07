@@ -35,7 +35,7 @@
                 );
                  $custom_query = new WP_Query( $args );
                     while ($custom_query->have_posts()) : $custom_query->the_post();?>
-                    <li><a href="#"><img src="<?php the_field('image_gallery')?>" alt=""></a></li>
+                    <li><a><img src="<?php the_field('image_gallery')?>" alt=""></a></li>
                   <?php endwhile;?>
             </ul>
           </div>
