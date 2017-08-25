@@ -3,7 +3,7 @@
 A WordPress theme constructed to a event company (Mirovoy)
 
 ### Project working
-* http://www.felipe.cf
+* http://www.mirovoyexperience.com
 
 #### Feature
 
